@@ -377,6 +377,23 @@ console.log(workersAbove20yrs);
 nameOfWorkers.map(newSalary => newSalary.Salary * 2).forEach(newSalary => (console.log(newSalary)));
 
 //Array of Numbers
-let arrOfNumbers = [2,4,6,8,10,9,7,5,3,1];
-console.log(arrOfNumbers.length)
-const firstAndLast = (arrOfNumbers) => console.log(`first number ${arrOfNumbers[0]} and ${arrOfNumbers[9]}`);
+var arrOfNumbers = [2,4,6,8,10,9,7,5,3,1];
+console.log(arrOfNumbers);
+const firstAndLast = (arrOfNumbers) => { return `${arrOfNumbers[0]} ${arrOfNumbers[arrOfNumbers.length - 1]}`};
+console.log(firstAndLast(arrOfNumbers));
+
+// A functiion that accepts an object as a parameter and returns a sentence using the object values.
+let obj = {
+    firstName: "Marcus",
+    lastName: "Foster",
+    Gender: "Male",
+    Age: 21,
+    Salary: 65760,
+};
+const statement = (obj) => `Your name is ${obj.firstName} ${obj.lastName},you are a ${obj.Age},you are a ${obj.Gender} and your current salary is ${obj.Salary}.`
+console.log(statement(obj));
+// A function that takes in two parameters in one line.
+let name = 'Muhammed';
+let score = 500;
+const x = (score, name) => `Hello, ${name}, your score is ${score}.`
+console.log(x(score, name));
